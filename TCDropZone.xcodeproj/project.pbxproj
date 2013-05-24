@@ -163,6 +163,7 @@
 				DA9BC975174F94AF00858CED /* Sources */,
 				DA9BC976174F94AF00858CED /* Frameworks */,
 				DA9BC977174F94AF00858CED /* Resources */,
+				DA9BC9B0174F94E600858CED /* Update Version Number */,
 			);
 			buildRules = (
 			);
@@ -253,6 +254,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		DA9BC9B0174F94E600858CED /* Update Version Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Update Version Number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -452,6 +467,7 @@
 				DA9BC9AC174F94B000858CED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA9BC9AD174F94B000858CED /* Build configuration list for PBXNativeTarget "TCDropZoneTests" */ = {
 			isa = XCConfigurationList;
@@ -460,6 +476,7 @@
 				DA9BC9AF174F94B000858CED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
