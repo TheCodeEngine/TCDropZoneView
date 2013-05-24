@@ -1,0 +1,467 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA9BC97D174F94AF00858CED /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9BC97C174F94AF00858CED /* Cocoa.framework */; };
+		DA9BC987174F94AF00858CED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA9BC985174F94AF00858CED /* InfoPlist.strings */; };
+		DA9BC989174F94AF00858CED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9BC988174F94AF00858CED /* main.m */; };
+		DA9BC98D174F94AF00858CED /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = DA9BC98B174F94AF00858CED /* Credits.rtf */; };
+		DA9BC990174F94AF00858CED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9BC98F174F94AF00858CED /* AppDelegate.m */; };
+		DA9BC993174F94AF00858CED /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA9BC991174F94AF00858CED /* MainMenu.xib */; };
+		DA9BC99B174F94B000858CED /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9BC99A174F94B000858CED /* SenTestingKit.framework */; };
+		DA9BC99C174F94B000858CED /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9BC97C174F94AF00858CED /* Cocoa.framework */; };
+		DA9BC9A4174F94B000858CED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA9BC9A2174F94B000858CED /* InfoPlist.strings */; };
+		DA9BC9A7174F94B000858CED /* TCDropZoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9BC9A6174F94B000858CED /* TCDropZoneTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DA9BC99D174F94B000858CED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA9BC971174F94AF00858CED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA9BC978174F94AF00858CED;
+			remoteInfo = TCDropZone;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DA9BC979174F94AF00858CED /* TCDropZone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCDropZone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA9BC97C174F94AF00858CED /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		DA9BC97F174F94AF00858CED /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		DA9BC980174F94AF00858CED /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DA9BC981174F94AF00858CED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DA9BC984174F94AF00858CED /* TCDropZone-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TCDropZone-Info.plist"; sourceTree = "<group>"; };
+		DA9BC986174F94AF00858CED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DA9BC988174F94AF00858CED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DA9BC98A174F94AF00858CED /* TCDropZone-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TCDropZone-Prefix.pch"; sourceTree = "<group>"; };
+		DA9BC98C174F94AF00858CED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		DA9BC98E174F94AF00858CED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DA9BC98F174F94AF00858CED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DA9BC992174F94AF00858CED /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		DA9BC999174F94B000858CED /* TCDropZoneTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCDropZoneTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA9BC99A174F94B000858CED /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		DA9BC9A1174F94B000858CED /* TCDropZoneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TCDropZoneTests-Info.plist"; sourceTree = "<group>"; };
+		DA9BC9A3174F94B000858CED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DA9BC9A5174F94B000858CED /* TCDropZoneTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCDropZoneTests.h; sourceTree = "<group>"; };
+		DA9BC9A6174F94B000858CED /* TCDropZoneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCDropZoneTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA9BC976174F94AF00858CED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA9BC97D174F94AF00858CED /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA9BC995174F94B000858CED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA9BC99B174F94B000858CED /* SenTestingKit.framework in Frameworks */,
+				DA9BC99C174F94B000858CED /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA9BC970174F94AF00858CED = {
+			isa = PBXGroup;
+			children = (
+				DA9BC982174F94AF00858CED /* TCDropZone */,
+				DA9BC99F174F94B000858CED /* TCDropZoneTests */,
+				DA9BC97B174F94AF00858CED /* Frameworks */,
+				DA9BC97A174F94AF00858CED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DA9BC97A174F94AF00858CED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA9BC979174F94AF00858CED /* TCDropZone.app */,
+				DA9BC999174F94B000858CED /* TCDropZoneTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA9BC97B174F94AF00858CED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA9BC97C174F94AF00858CED /* Cocoa.framework */,
+				DA9BC99A174F94B000858CED /* SenTestingKit.framework */,
+				DA9BC97E174F94AF00858CED /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA9BC97E174F94AF00858CED /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA9BC97F174F94AF00858CED /* AppKit.framework */,
+				DA9BC980174F94AF00858CED /* CoreData.framework */,
+				DA9BC981174F94AF00858CED /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		DA9BC982174F94AF00858CED /* TCDropZone */ = {
+			isa = PBXGroup;
+			children = (
+				DA9BC98E174F94AF00858CED /* AppDelegate.h */,
+				DA9BC98F174F94AF00858CED /* AppDelegate.m */,
+				DA9BC991174F94AF00858CED /* MainMenu.xib */,
+				DA9BC983174F94AF00858CED /* Supporting Files */,
+			);
+			path = TCDropZone;
+			sourceTree = "<group>";
+		};
+		DA9BC983174F94AF00858CED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA9BC984174F94AF00858CED /* TCDropZone-Info.plist */,
+				DA9BC985174F94AF00858CED /* InfoPlist.strings */,
+				DA9BC988174F94AF00858CED /* main.m */,
+				DA9BC98A174F94AF00858CED /* TCDropZone-Prefix.pch */,
+				DA9BC98B174F94AF00858CED /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DA9BC99F174F94B000858CED /* TCDropZoneTests */ = {
+			isa = PBXGroup;
+			children = (
+				DA9BC9A5174F94B000858CED /* TCDropZoneTests.h */,
+				DA9BC9A6174F94B000858CED /* TCDropZoneTests.m */,
+				DA9BC9A0174F94B000858CED /* Supporting Files */,
+			);
+			path = TCDropZoneTests;
+			sourceTree = "<group>";
+		};
+		DA9BC9A0174F94B000858CED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA9BC9A1174F94B000858CED /* TCDropZoneTests-Info.plist */,
+				DA9BC9A2174F94B000858CED /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA9BC978174F94AF00858CED /* TCDropZone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA9BC9AA174F94B000858CED /* Build configuration list for PBXNativeTarget "TCDropZone" */;
+			buildPhases = (
+				DA9BC975174F94AF00858CED /* Sources */,
+				DA9BC976174F94AF00858CED /* Frameworks */,
+				DA9BC977174F94AF00858CED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TCDropZone;
+			productName = TCDropZone;
+			productReference = DA9BC979174F94AF00858CED /* TCDropZone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DA9BC998174F94B000858CED /* TCDropZoneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA9BC9AD174F94B000858CED /* Build configuration list for PBXNativeTarget "TCDropZoneTests" */;
+			buildPhases = (
+				DA9BC994174F94B000858CED /* Sources */,
+				DA9BC995174F94B000858CED /* Frameworks */,
+				DA9BC996174F94B000858CED /* Resources */,
+				DA9BC997174F94B000858CED /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA9BC99E174F94B000858CED /* PBXTargetDependency */,
+			);
+			name = TCDropZoneTests;
+			productName = TCDropZoneTests;
+			productReference = DA9BC999174F94B000858CED /* TCDropZoneTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA9BC971174F94AF00858CED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = TheCodeEngine;
+			};
+			buildConfigurationList = DA9BC974174F94AF00858CED /* Build configuration list for PBXProject "TCDropZone" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DA9BC970174F94AF00858CED;
+			productRefGroup = DA9BC97A174F94AF00858CED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA9BC978174F94AF00858CED /* TCDropZone */,
+				DA9BC998174F94B000858CED /* TCDropZoneTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA9BC977174F94AF00858CED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA9BC987174F94AF00858CED /* InfoPlist.strings in Resources */,
+				DA9BC98D174F94AF00858CED /* Credits.rtf in Resources */,
+				DA9BC993174F94AF00858CED /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA9BC996174F94B000858CED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA9BC9A4174F94B000858CED /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DA9BC997174F94B000858CED /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA9BC975174F94AF00858CED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA9BC989174F94AF00858CED /* main.m in Sources */,
+				DA9BC990174F94AF00858CED /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA9BC994174F94B000858CED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA9BC9A7174F94B000858CED /* TCDropZoneTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA9BC99E174F94B000858CED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA9BC978174F94AF00858CED /* TCDropZone */;
+			targetProxy = DA9BC99D174F94B000858CED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DA9BC985174F94AF00858CED /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA9BC986174F94AF00858CED /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DA9BC98B174F94AF00858CED /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA9BC98C174F94AF00858CED /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		DA9BC991174F94AF00858CED /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA9BC992174F94AF00858CED /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		DA9BC9A2174F94B000858CED /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA9BC9A3174F94B000858CED /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DA9BC9A8174F94B000858CED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DA9BC9A9174F94B000858CED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DA9BC9AB174F94B000858CED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TCDropZone/TCDropZone-Prefix.pch";
+				INFOPLIST_FILE = "TCDropZone/TCDropZone-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DA9BC9AC174F94B000858CED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TCDropZone/TCDropZone-Prefix.pch";
+				INFOPLIST_FILE = "TCDropZone/TCDropZone-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DA9BC9AE174F94B000858CED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TCDropZone.app/Contents/MacOS/TCDropZone";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TCDropZone/TCDropZone-Prefix.pch";
+				INFOPLIST_FILE = "TCDropZoneTests/TCDropZoneTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		DA9BC9AF174F94B000858CED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TCDropZone.app/Contents/MacOS/TCDropZone";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TCDropZone/TCDropZone-Prefix.pch";
+				INFOPLIST_FILE = "TCDropZoneTests/TCDropZoneTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA9BC974174F94AF00858CED /* Build configuration list for PBXProject "TCDropZone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA9BC9A8174F94B000858CED /* Debug */,
+				DA9BC9A9174F94B000858CED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA9BC9AA174F94B000858CED /* Build configuration list for PBXNativeTarget "TCDropZone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA9BC9AB174F94B000858CED /* Debug */,
+				DA9BC9AC174F94B000858CED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DA9BC9AD174F94B000858CED /* Build configuration list for PBXNativeTarget "TCDropZoneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA9BC9AE174F94B000858CED /* Debug */,
+				DA9BC9AF174F94B000858CED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA9BC971174F94AF00858CED /* Project object */;
+}
