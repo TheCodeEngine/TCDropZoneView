@@ -17,6 +17,7 @@
 		DA9BC99C174F94B000858CED /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9BC97C174F94AF00858CED /* Cocoa.framework */; };
 		DA9BC9A4174F94B000858CED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA9BC9A2174F94B000858CED /* InfoPlist.strings */; };
 		DA9BC9A7174F94B000858CED /* TCDropZoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9BC9A6174F94B000858CED /* TCDropZoneTests.m */; };
+		DA9BC9B6174F95CA00858CED /* TCDropFileZoneView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9BC9B5174F95CA00858CED /* TCDropFileZoneView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		DA9BC9A3174F94B000858CED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DA9BC9A5174F94B000858CED /* TCDropZoneTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCDropZoneTests.h; sourceTree = "<group>"; };
 		DA9BC9A6174F94B000858CED /* TCDropZoneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCDropZoneTests.m; sourceTree = "<group>"; };
+		DA9BC9B4174F95CA00858CED /* TCDropFileZoneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCDropFileZoneView.h; sourceTree = "<group>"; };
+		DA9BC9B5174F95CA00858CED /* TCDropFileZoneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCDropFileZoneView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 				DA9BC98F174F94AF00858CED /* AppDelegate.m */,
 				DA9BC991174F94AF00858CED /* MainMenu.xib */,
 				DA9BC983174F94AF00858CED /* Supporting Files */,
+				DA9BC9B4174F95CA00858CED /* TCDropFileZoneView.h */,
+				DA9BC9B5174F95CA00858CED /* TCDropFileZoneView.m */,
 			);
 			path = TCDropZone;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 			files = (
 				DA9BC989174F94AF00858CED /* main.m in Sources */,
 				DA9BC990174F94AF00858CED /* AppDelegate.m in Sources */,
+				DA9BC9B6174F95CA00858CED /* TCDropFileZoneView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
