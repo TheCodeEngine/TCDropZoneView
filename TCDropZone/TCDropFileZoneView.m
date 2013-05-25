@@ -14,6 +14,7 @@
 {
     if ( self = [super initWithFrame:frame] )
     {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(eventHandler:) name:@"eventType" object:nil];
         [self registerForDraggedTypes:[NSArray arrayWithObject:NSFilenamesPboardType]];
         fileisEntered = NO;
     }
@@ -60,18 +61,30 @@
     return YES;
 }
 
-- (BOOL)performDragOperation:(id )sender
+- (BOOL)performDragOperation:(id)sender
 {
+    fileisEntered = NO;
+    [self setNeedsDisplay:YES];
     NSPasteboard *pboard = [sender draggingPasteboard];
     
     if ( [[pboard types] containsObject:NSFilenamesPboardType] ) {
         NSArray *files = [pboard propertyListForType:NSFilenamesPboardType];
-        int numberOfFiles = [files count];
-        NSLog(@"Print FIles: %@", files);
-        // Perform operation using the list of files
+        // Count testen ? int numberOfFiles = [files count];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"eventType" object:files];
         return YES;
     }
     return NO;
 }
+
+#pragma mark - Notification
+
+- (void)eventHandler: (NSNotification *) notification
+{
+    if ( self.delegate && [self.delegate respondsToSelector:@selector(dropZoneGetFiles:)] )
+    {
+        [self.delegate dropZoneGetFiles:[notification object]];
+    }
+}
+         
 
 @end

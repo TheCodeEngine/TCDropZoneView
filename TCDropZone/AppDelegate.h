@@ -8,8 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+#import "TCDropFileZoneView.h"
+
+@interface AppDelegate : NSObject <NSApplicationDelegate, TCDropFileZoneDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+@property (strong) TCDropFileZoneView *dropFileZoneView;
 
 @end

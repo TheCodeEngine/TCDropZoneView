@@ -8,9 +8,15 @@
 
 #import <Cocoa/Cocoa.h>
 
+@protocol TCDropFileZoneDelegate <NSObject>
+- (void)dropZoneGetFiles:(NSArray*)filePathArray;
+@end
+
 @interface TCDropFileZoneView : NSView
 {
     BOOL fileisEntered;
 }
+
+@property (strong) id <TCDropFileZoneDelegate> delegate;
 
 @end

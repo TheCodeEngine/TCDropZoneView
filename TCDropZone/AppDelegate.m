@@ -12,7 +12,15 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
+    self.dropFileZoneView = [[TCDropFileZoneView alloc] init];
+    self.dropFileZoneView.delegate = self;
+}
+
+#pragma mark - TCDropFileZoneDelegate
+
+- (void)dropZoneGetFiles:(NSArray *)filePathArray
+{
+    NSLog(@"AppDelegateFiles: %@", filePathArray);
 }
 
 @end
