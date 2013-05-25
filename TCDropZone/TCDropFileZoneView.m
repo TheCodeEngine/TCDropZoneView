@@ -14,7 +14,7 @@
 {
     if ( self = [super initWithFrame:frame] )
     {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(eventHandler:) name:@"eventType" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(eventHandler:) name:@"TCDropbFileZoneGetFiles" object:nil];
         [self registerForDraggedTypes:[NSArray arrayWithObject:NSFilenamesPboardType]];
         fileisEntered = NO;
     }
@@ -24,17 +24,77 @@
 - (void)drawRect:(NSRect)dirtyRect
 {
     // Drawing code here.
-    NSEraseRect(dirtyRect);
+    
+    // Mitte berechnen
+    CGPoint center;
+    center.x = dirtyRect.size.width / 2;
+    center.y = dirtyRect.size.height / 2;
+    
+    // Settings Rounded Rect
+    CGFloat rectLength = 200;
     
     if ( fileisEntered == NO )
     { // Kein File is auf der Drag Zone
-        [[NSColor whiteColor] set];
-        NSRectFill(dirtyRect);
+        //// Color Declarations
+        NSColor* color = [NSColor colorWithCalibratedRed: 0.568 green: 0.577 blue: 0.585 alpha: 1];
+        
+        //// DropbZone
+        {
+            //// Pfeil Drawing
+            NSBezierPath* pfeilPath = [NSBezierPath bezierPath];
+            [pfeilPath moveToPoint: NSMakePoint(center.x, center.y)];
+            [pfeilPath lineToPoint: NSMakePoint(center.x + 41.67 - 52.5, center.y + 46.44 - 46.44)];
+            [pfeilPath lineToPoint: NSMakePoint(center.x + 41.67 - 52.5, center.y + 78.5 - 46.44)];
+            [pfeilPath lineToPoint: NSMakePoint(center.x + 60.67 - 52.5, center.y + 78.5 - 46.44)];
+            [pfeilPath lineToPoint: NSMakePoint(center.x + 60.67 - 52.5, center.y + 46.44 - 46.44)];
+            [pfeilPath lineToPoint: NSMakePoint(center.x + 70.5 - 52.5, center.y + 46.44 - 46.44)];
+            [pfeilPath lineToPoint: NSMakePoint(center.x + 51.5 - 52.5, center.y + 25.5 - 46.44)];
+            [pfeilPath lineToPoint: NSMakePoint(center.x + 32.5 - 52.5, center.y + 46.44 - 46.44)];
+            [pfeilPath closePath];
+            [color setFill];
+            [pfeilPath fill];
+            
+            //// Rounded Rectangle Drawing
+            NSBezierPath* roundedRectanglePath = [NSBezierPath bezierPathWithRoundedRect: NSMakeRect(center.x - rectLength/2, center.y - rectLength/2, rectLength, rectLength) xRadius: 7 yRadius: 7];
+            [color setStroke];
+            [roundedRectanglePath setLineWidth: 10];
+            CGFloat roundedRectanglePattern[] = {24, 24, 24, 24};
+            [roundedRectanglePath setLineDash: roundedRectanglePattern count: 4 phase: 2.3];
+            [roundedRectanglePath stroke];
+        }
     }
     else
     { // File befindet sich auf der Drag Zone
-        [[NSColor greenColor] set];
+        //// Color Declarations
+        NSColor* color = [NSColor whiteColor];
+        
+        [[NSColor colorWithSRGBRed:0.52f green:0.77f blue:0.94f alpha:1.00f] set];
         NSRectFill(dirtyRect);
+        //// DropbZone
+        {
+            //// Pfeil Drawing
+            NSBezierPath* pfeilPath = [NSBezierPath bezierPath];
+            [pfeilPath moveToPoint: NSMakePoint(center.x, center.y)];
+            [pfeilPath lineToPoint: NSMakePoint(center.x + 41.67 - 52.5, center.y + 46.44 - 46.44)];
+            [pfeilPath lineToPoint: NSMakePoint(center.x + 41.67 - 52.5, center.y + 78.5 - 46.44)];
+            [pfeilPath lineToPoint: NSMakePoint(center.x + 60.67 - 52.5, center.y + 78.5 - 46.44)];
+            [pfeilPath lineToPoint: NSMakePoint(center.x + 60.67 - 52.5, center.y + 46.44 - 46.44)];
+            [pfeilPath lineToPoint: NSMakePoint(center.x + 70.5 - 52.5, center.y + 46.44 - 46.44)];
+            [pfeilPath lineToPoint: NSMakePoint(center.x + 51.5 - 52.5, center.y + 25.5 - 46.44)];
+            [pfeilPath lineToPoint: NSMakePoint(center.x + 32.5 - 52.5, center.y + 46.44 - 46.44)];
+            [pfeilPath closePath];
+            [color setFill];
+            [pfeilPath fill];
+            
+            
+            //// Rounded Rectangle Drawing
+            NSBezierPath* roundedRectanglePath = [NSBezierPath bezierPathWithRoundedRect: NSMakeRect(center.x - rectLength/2, center.y - rectLength/2, rectLength, rectLength) xRadius: 7 yRadius: 7];
+            [color setStroke];
+            [roundedRectanglePath setLineWidth: 10];
+            CGFloat roundedRectanglePattern[] = {24, 24, 24, 24};
+            [roundedRectanglePath setLineDash: roundedRectanglePattern count: 4 phase: 2.3];
+            [roundedRectanglePath stroke];
+        }
     }
 }
 
@@ -70,7 +130,7 @@
     if ( [[pboard types] containsObject:NSFilenamesPboardType] ) {
         NSArray *files = [pboard propertyListForType:NSFilenamesPboardType];
         // Count testen ? int numberOfFiles = [files count];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"eventType" object:files];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"TCDropbFileZoneGetFiles" object:files];
         return YES;
     }
     return NO;
